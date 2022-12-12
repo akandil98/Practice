@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:practice/layout/news_app/cubit/states.dart';
 import 'package:practice/modules/business/business_screen.dart';
 import 'package:practice/modules/science/science_screen.dart';
-import 'package:practice/modules/settings/settings_screen.dart';
 import 'package:practice/modules/sports/sports_screen.dart';
 import 'package:practice/shared/network/remote/dio_helper.dart';
 
@@ -28,17 +27,17 @@ class NewsCubit extends Cubit<NewsStates> {
       icon: Icon(Icons.science),
       label: 'Science',
     ),
-    const BottomNavigationBarItem(
+    /* const BottomNavigationBarItem(
       icon: Icon(Icons.settings),
       label: 'Settings',
-    ),
+    ), */
   ];
 
   List<Widget> screens = [
     const BusinessScreen(),
     const SportsScreen(),
     const ScienceScreen(),
-    const SettingsScreen(),
+    //const SettingsScreen(),
   ];
 
   void changeBottomNavBar(int index) {
